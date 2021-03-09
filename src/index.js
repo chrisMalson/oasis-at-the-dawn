@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { ThemeProvider } from '@material-ui/core/styles';
+
+import Header from './components/Header';
+import Description from './components/Description';
+import PhotoGallery from './components/PhotoGallery';
+import TopBar from './components/TopBar';
 import reportWebVitals from './reportWebVitals';
+import theme from "./theme";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <TopBar />
+      <Header />
+      <Description />
+      <PhotoGallery />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
