@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Description from './components/Description';
 import PhotoGallery from './components/PhotoGallery';
 import TopBar from './components/TopBar';
+import Footer from './components/Footer';
 import reportWebVitals from './reportWebVitals';
 import theme from "./theme";
 
@@ -16,6 +17,7 @@ ReactDOM.render(
       <Header />
       <Description />
       <PhotoGallery />
+      <Footer />
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')

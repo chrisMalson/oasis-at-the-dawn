@@ -1,20 +1,20 @@
 import { Fab, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   container: {
     display: "flex",
     justifyContent: "center",
     margin: "1em 25%"
   },
   button: {
-    background: "#93e9be",
+    background: theme.palette.primary.main,
     '&:hover': {
       background: '#bff'
     },
     padding: "3em"
   }
-});
+}));
 
 const BookNowButton = () => {
   const { button, container } = useStyles();
