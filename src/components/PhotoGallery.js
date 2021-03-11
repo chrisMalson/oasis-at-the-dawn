@@ -1,6 +1,8 @@
-import { Paper } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import exterior1 from "../img/exterior1.png";
+import { Paper, Typography } from "@material-ui/core";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import Carousel from 'react-material-ui-carousel';
+
+import photos from '../img/photos';
 
 const useStyles = makeStyles({
   container: {
@@ -9,24 +11,49 @@ const useStyles = makeStyles({
   },
   paper: {
     display: "flex",
-    maxWidth: "550px",
-    justifyContent: "center",
+    flexDirection: "column",
+    width: "550px",
+    height: "400px",
+    justifyContent: "center"
   },
   image: {
-    minWidth: "500px",
+    minWidth: "200px",
     maxWidth: "100%",
-    padding: "1em"
+    height: "350px",
+    padding: "1em 1em 0.5em 1em"
   }
 });
 
+const Photo = ({ item }) => {
+  const { paper, image } = useStyles();
+
+  return (
+    <Paper className={paper} elevation={2}>
+      <img className={image} src={item.image} alt={item.description} />
+      <Typography variant="h6" align="center" gutterBottom>{item.description}</Typography>
+    </Paper>
+  );
+};
+
 const PhotoGallery = () => {
-  const { container, image, paper } = useStyles();
+  const { container } = useStyles();
+  const theme = useTheme();
+
+  const allPhotos = photos.map((item, i) => <Photo key={i} item={item} />);
 
   return (
     <div className={container}>
-      <Paper className={paper} elevation={2}>
-        <img className={image} src={exterior1} />
-      </Paper>
+      <Carousel
+        autoPlay={false}
+        animation="slide"
+        navButtonsProps={{
+          style: {
+            backgroundColor: theme.palette.secondary.main
+          }
+        }}
+      >
+        {allPhotos}
+      </Carousel>
     </div>
   );
 };
