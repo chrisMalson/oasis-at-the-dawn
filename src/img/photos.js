@@ -27,7 +27,7 @@ const photos = [
   { description: "Dining Room", image: dining1 },
   { description: "Kitchen", image: kitchen1 },
   { description: "Kitchen", image: kitchen2 },
-  { description: "Laundry", image: laundry1 },
+  { description: "Laundry Room", image: laundry1 },
   { description: "Master Bedroom", image: master_bed1 },
   { description: "Master Bedroom", image: master_bed2 },
   { description: "Master Bathroom", image: master_bath1 },

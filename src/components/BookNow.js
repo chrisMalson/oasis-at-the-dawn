@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Fab, Typography } from "@material-ui/core";
+import { useEffect, useState } from 'react';
+import { Button, Fab, Slide, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
@@ -17,18 +17,16 @@ const useStyles = makeStyles(theme => ({
     padding: "3em 2em"
   },
   text: {
-    color: "#000",
-    textShadow: `-1px -1px 0 #fff,  
-    1px -1px 0 #fff,
-    -1px 1px 0 #fff,
-    1px 1px 0 #fff`,
+    color: "#066234"
   },
   popup: {
     position: "fixed",
-    bottom: "1em",
-    right: "1em"
+    bottom: "0px",
+    right: "0px"
   }
 }));
+
+const bookingURL = "https://www.galvestontxbeachrental.com/dawn_511_oasis-at-the-dawn/";
 
 const BookNowButton = () => {
   const { button, container, text } = useStyles();
@@ -37,7 +35,7 @@ const BookNowButton = () => {
   <div className={container}>
     <Fab
       className={button}
-      href="https://www.galvestontxbeachrental.com/dawn_511_oasis-at-the-dawn/"
+      href={bookingURL}
       target="_blank"
       variant="extended"
     >
@@ -50,13 +48,23 @@ const BookNowButton = () => {
 };
 
 const BookNowPopup = () => {
-  const [visible, setVisible] = useState(false);
+  const [yPos, setYPos] = useState(14);
   const { popup } = useStyles();
 
+  useEffect(() => {
+    window.onscroll = () => {
+      setYPos(window.pageYOffset);
+    };
+  }, []);
+
   return (
-    <div className={popup}>
-      <Typography variant="h1"><a href="https://google.com">book now</a></Typography>
-    </div>
+    <Slide direction="left" in={yPos >= 700} mountOnEnter unmountOnExit>
+      <div className={popup}>
+        <Button variant="contained" color="secondary" href={bookingURL}>
+          <Typography variant="h6">Book Now</Typography>
+        </Button>
+      </div>
+    </Slide>
   );
 };
 

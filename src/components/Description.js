@@ -18,7 +18,10 @@ const useStyles = makeStyles(theme => ({
   },
   list: {
     textAlign: "center",
-    margin: "2em 25%"
+    margin: "2em 3.5em",
+    [theme.breakpoints.up("md")]: {
+      margin: "2em 25%"
+    }
   }
 }));
 

@@ -15,7 +15,11 @@ const Footer = () => {
   const { container } = useStyles();
   return (
     <div className={container}>
-      <Typography variant="h6" align="center">This is a footer.</Typography>
+      <Typography variant="body2" align="center">
+        Oasis at the Dawn<br />
+        7000 Seawall Blvd, Unit #511<br />
+        Galveston, TX 77551
+      </Typography>
     </div>
   );
 };
