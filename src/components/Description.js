@@ -22,11 +22,14 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up("md")]: {
       margin: "2em 25%"
     }
+  },
+  icon: {
+    color: theme.palette.primary.dark
   }
 }));
 
 const Description = () => {
-  const { container, list } = useStyles();
+  const { container, list, icon } = useStyles();
 
   return (
     <div className={container}>
@@ -47,49 +50,49 @@ const Description = () => {
       </Typography>
       <List className={list}>
         <ListItem>
-          <ListItemIcon>
+          <ListItemIcon className={icon}>
             <HomeWorkOutlinedIcon />
           </ListItemIcon>
           <ListItemText>1,116 sqft condo</ListItemText>
         </ListItem>
         <Divider />
         <ListItem>
-          <ListItemIcon>
+          <ListItemIcon className={icon}>
             <Filter2OutlinedIcon />
           </ListItemIcon>
           <ListItemText>2 bedrooms, 2 bathrooms</ListItemText>
         </ListItem>
         <Divider />
         <ListItem>
-          <ListItemIcon>
+          <ListItemIcon className={icon}>
             <HotelOutlinedIcon />
           </ListItemIcon>
           <ListItemText>Sleeps up to 6 people with sleeper sofa</ListItemText>
         </ListItem>
         <Divider />
         <ListItem>
-          <ListItemIcon>
+          <ListItemIcon className={icon}>
             <EmojiTransportationOutlinedIcon />
           </ListItemIcon>
           <ListItemText>First floor condo; easy access from parking lot</ListItemText>
         </ListItem>
         <Divider />
         <ListItem>
-          <ListItemIcon>
+          <ListItemIcon className={icon}>
             <VolumeOffOutlinedIcon />
           </ListItemIcon>
           <ListItemText>Located in back of complex, away from road and noise</ListItemText>
         </ListItem>
         <Divider />
         <ListItem>
-          <ListItemIcon>
+          <ListItemIcon className={icon}>
             <FlareOutlinedIcon />
           </ListItemIcon>
           <ListItemText>Recently remodeled; tile floors / granite countertops</ListItemText>
         </ListItem>
         <Divider />
         <ListItem>
-          <ListItemIcon>
+          <ListItemIcon className={icon}>
             <PoolOutlinedIcon />
           </ListItemIcon>
           <ListItemText>Community heated pool and hot tub nearby</ListItemText>

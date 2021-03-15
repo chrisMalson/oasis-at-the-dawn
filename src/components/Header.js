@@ -23,6 +23,9 @@ const useStyles = makeStyles(theme => ({
     backgroundImage: 'linear-gradient(rgba(0,0,255,0.5), rgba(0,0,0,0))',
     padding: "1.5em 0"
   },
+  buttonContainer: {
+    background: 'linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.75))'
+  },
   text: {
     textAlign: "center",
     color: "#fff",
@@ -35,7 +38,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Header = () => {
-  const { hero, text, textContainer } = useStyles();
+  const { hero, text, textContainer, buttonContainer } = useStyles();
   const theme = useTheme();
 
   return (
@@ -44,7 +47,7 @@ const Header = () => {
         <Typography variant={useMediaQuery(theme.breakpoints.up('md')) ? "h1" : "h3"} className={text}>Oasis at the Dawn</Typography>
         <Typography variant="h5" className={text}>Galveston, Texas</Typography>
       </div>
-      <div>
+      <div className={buttonContainer}>
         <BookNowButton />
       </div>
     </div>

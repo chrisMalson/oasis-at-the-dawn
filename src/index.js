@@ -30,7 +30,6 @@ ReactDOM.render(
 reportWebVitals();
 
 
-// book now button appears when scrolling down
 // add black gradient to bottom of hero
 // change color of icons
 // rip new pictures from ryson site

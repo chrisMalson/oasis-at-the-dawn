@@ -12,25 +12,28 @@ const useStyles = makeStyles({
   paper: {
     display: "flex",
     flexDirection: "column",
+    justifyContent: "flex-end",
     width: "550px",
     height: "400px",
-    justifyContent: "center"
   },
-  image: {
-    minWidth: "200px",
-    maxWidth: "100%",
-    height: "350px",
-    padding: "1em 1em 0.5em 1em"
+  gradient: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-end",
+    height: '25%',
+    background: 'linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1))',
+    color: '#fff'
   }
 });
 
 const Photo = ({ item }) => {
-  const { paper, image } = useStyles();
+  const { paper, gradient } = useStyles();
 
   return (
-    <Paper className={paper} elevation={2}>
-      <img className={image} src={item.image} alt={item.description} />
-      <Typography variant="h6" align="center" gutterBottom>{item.description}</Typography>
+    <Paper className={paper} elevation={2} style={{ backgroundImage: `url(${item.image})` }}>
+      <div className={gradient}>
+        <Typography variant="h6" align="center" gutterBottom>{item.description}</Typography>
+      </div>
     </Paper>
   );
 };

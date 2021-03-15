@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     padding: "3em 2em"
   },
   text: {
-    color: "#066234"
+    color: theme.palette.primary.dark
   },
   popup: {
     position: "fixed",
