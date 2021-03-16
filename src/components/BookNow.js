@@ -1,23 +1,23 @@
 import { useEffect, useState } from 'react';
-import { Button, Fab, Slide, Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { Button, Slide, Typography, useMediaQuery } from "@material-ui/core";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
   container: {
     display: "flex",
     justifyContent: "center",
-    margin: "1em 25%"
+    margin: "1em",
+    [theme.breakpoints.up('sm')]: {
+      margin: '1em 25%'
+    }
   },
   button: {
     background: theme.palette.primary.main,
     '&:hover': {
       background: '#bff'
     },
-    marginBottom: "2em",
-    padding: "3em 2em"
-  },
-  text: {
-    color: theme.palette.primary.dark
+    padding: "1.5em 2em",
+    borderRadius: '10px'
   },
   popup: {
     position: "fixed",
@@ -29,20 +29,29 @@ const useStyles = makeStyles(theme => ({
 const bookingURL = "https://www.galvestontxbeachrental.com/dawn_511_oasis-at-the-dawn/";
 
 const BookNowButton = () => {
-  const { button, container, text } = useStyles();
+  const { button } = useStyles();
+  const theme = useTheme();
+
+  return (
+  <Button
+    className={button}
+    href={bookingURL}
+    target="_blank"
+    variant="contained"
+  >
+    <Typography align="center" variant={useMediaQuery(theme.breakpoints.up('sm')) ? 'h4' : 'h6'}>
+      Book Now
+    </Typography>
+  </Button>
+  );
+};
+
+const BookNowHeader = () => {
+  const { container } = useStyles();
 
   return (
   <div className={container}>
-    <Fab
-      className={button}
-      href={bookingURL}
-      target="_blank"
-      variant="extended"
-    >
-      <Typography align="center" className={text} variant="h4">
-        Book Now
-      </Typography>
-    </Fab>
+    <BookNowButton />
   </div>
   );
 };
@@ -59,15 +68,16 @@ const BookNowPopup = () => {
 
   return (
     <Slide direction="left" in={yPos >= 700} mountOnEnter unmountOnExit>
-      <div className={popup}>
-        <Button variant="contained" color="secondary" href={bookingURL}>
-          <Typography variant="h6">Book Now</Typography>
-        </Button>
+      <div className={popup} style={yPos >= document.documentElement.offsetHeight - window.innerHeight && {
+        bottom: '10px',
+        right: '10px'
+      }}>
+        <BookNowButton />
       </div>
     </Slide>
   );
 };
 
 
-export { BookNowButton, BookNowPopup };
+export { BookNowHeader, BookNowPopup };
 

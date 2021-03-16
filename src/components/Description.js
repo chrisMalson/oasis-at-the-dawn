@@ -1,109 +1,63 @@
-import { Divider, Typography, List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import HomeWorkOutlinedIcon from '@material-ui/icons/HomeWorkOutlined';
-import Filter2OutlinedIcon from '@material-ui/icons/Filter2Outlined';
-import HotelOutlinedIcon from '@material-ui/icons/HotelOutlined';
-import EmojiTransportationOutlinedIcon from '@material-ui/icons/EmojiTransportationOutlined';
-import VolumeOffOutlinedIcon from '@material-ui/icons/VolumeOffOutlined';
-import FlareOutlinedIcon from '@material-ui/icons/FlareOutlined';
-import PoolOutlinedIcon from '@material-ui/icons/PoolOutlined';
 
 
 const useStyles = makeStyles(theme => ({
   container: {
     margin: "2em 3.5em",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       margin: "2em 25%"
     }
   },
-  list: {
-    textAlign: "center",
-    margin: "2em 3.5em",
-    [theme.breakpoints.up("md")]: {
-      margin: "2em 25%"
-    }
-  },
-  icon: {
-    color: theme.palette.primary.dark
+  motto: {
+    fontFamily: '"Kaushan Script"',
+    marginBottom: '2rem'
   }
 }));
 
 const Description = () => {
-  const { container, list, icon } = useStyles();
+  const { container, motto } = useStyles();
 
   return (
     <div className={container}>
-      <Typography align="center" color="secondary" variant="h3" gutterBottom>
-        "Just another vacation home!"
+      <Typography align="center" color="secondary" variant="h3" className={motto}>
+        "Life's better at the beach!"
       </Typography>
       <Typography>
-        This is a vacation place, which means that if you're looking to stay at a place that is different 
-        from the place in which you currently reside, then you can stay at this place. It costs money to
-        stay at the place, but in exchange for spending money you get the opportunity to stay at the place
-        because you paid money for the abiListItemty to stay there. While you're there, you can choose to either stay
-        at the place the entire time or leave periodically to do things in the immediate area. You can also
-        choose to leave and do things that are significantly further away from the vacation place, but at some
-        point there is inevitably a diminishing returns effect in which you may as well have either chosen a
-        vacation place that was closer to the intended destination or perhaps decided not to stay at a vacation
-        place to begin with. However, the decision is yours to make and so if you want to give us money to stay
-        at this place for some time then what you do with that time is your business.
+        Oasis at the Dawn is a peaceful and quiet first floor condo surrounded by beautiful grounds and palm trees,
+        located only steps away from the swimming pool and across the Seawall from the recently restored "Babe's Beach".
+        This condo was recently remodeled and the large open floor plan features tile floors and an updated kitchen with
+        granite counters.  Guests will enjoy fun in the sun all day, dining and clubbing in the evening and peaceful
+        reflection in the evening.<br /><br />
+
+        Oasis at the Dawn is a large, two bedroom, two bath condominium that will accommodate up to 6 guests.  The large
+        floor plan includes a full kitchen and dining area along with a full size washer and dryer for the convenience of
+        the guests. The living area features a queen sleeper sofa with a 3" foam mattress,  a 50" Smart TV, and a
+        gliding reclining chair for guests who prefer their afternoon naps in a recliner!  The primary bedroom features
+        a king bed, 43"  TV and en suite bath with step in shower.  The second bedroom also features a king bed and a 43"
+        TV (non-cable, Smart TV in this bedroom).   This condo is perfect for two couples to share - each will have a
+        king size bed.  This home has Xfinity X1 delivering 140 HD channels plus over 500 movies on demand. This condo
+        also features 200mgb wireless internet to complete the package.<br /><br />
+
+        The Dawn Galveston is located close to many of Galveston's best attractions and on the world famous "Seawall"
+        at the shores of the Gulf of Mexico. Walk to shopping, restaurants, ice cream, fishing and the beach. Guests
+        could easily park their vehicle upon arrival and never drive again until check-out. The Dawn is walking
+        distance to Walmart, McDonald’s, Pit Stop BBQ, Papa John’s, Jimmy John’s, Sonic, Golden Corral, Happy Buddha,
+        Waffle House, Orange Leaf Frozen Yogurt, Frios Gourmet Pops {'&'} Island Froyo, Rita’s Italian Ice, Seawall
+        Souvenirs, Valero Corner Store, Babe’s Beach and the world’s longest continuous sidewalk, Seawall
+        Boulevard.<br /><br />
+
+        All reservations at The Dawn Condominiums require a $30 parking fee per vehicle (two max); we have reduced
+        our rates to cover this charge. The Dawn does not allow boats, RV’s or trailers to be parked on-premises.
+        The Dawn requires this fee be paid directly to The Dawn HOA at their front office upon arrival.  When
+        registering at The Dawn guests will receive their pool/gym bands (up to 6 for a one-bedroom and up to 8
+        for a two-bedroom) and access codes for parking gates, walk-through gates and for the fitness center.
+        Pool/gym bands should be returned to The Dawn prior to departure.<br /><br />
+
+        Pets are not allowed; minimum age of 21 years or older to rent.        
       </Typography>
-      <List className={list}>
-        <ListItem>
-          <ListItemIcon className={icon}>
-            <HomeWorkOutlinedIcon />
-          </ListItemIcon>
-          <ListItemText>1,116 sqft condo</ListItemText>
-        </ListItem>
-        <Divider />
-        <ListItem>
-          <ListItemIcon className={icon}>
-            <Filter2OutlinedIcon />
-          </ListItemIcon>
-          <ListItemText>2 bedrooms, 2 bathrooms</ListItemText>
-        </ListItem>
-        <Divider />
-        <ListItem>
-          <ListItemIcon className={icon}>
-            <HotelOutlinedIcon />
-          </ListItemIcon>
-          <ListItemText>Sleeps up to 6 people with sleeper sofa</ListItemText>
-        </ListItem>
-        <Divider />
-        <ListItem>
-          <ListItemIcon className={icon}>
-            <EmojiTransportationOutlinedIcon />
-          </ListItemIcon>
-          <ListItemText>First floor condo; easy access from parking lot</ListItemText>
-        </ListItem>
-        <Divider />
-        <ListItem>
-          <ListItemIcon className={icon}>
-            <VolumeOffOutlinedIcon />
-          </ListItemIcon>
-          <ListItemText>Located in back of complex, away from road and noise</ListItemText>
-        </ListItem>
-        <Divider />
-        <ListItem>
-          <ListItemIcon className={icon}>
-            <FlareOutlinedIcon />
-          </ListItemIcon>
-          <ListItemText>Recently remodeled; tile floors / granite countertops</ListItemText>
-        </ListItem>
-        <Divider />
-        <ListItem>
-          <ListItemIcon className={icon}>
-            <PoolOutlinedIcon />
-          </ListItemIcon>
-          <ListItemText>Community heated pool and hot tub nearby</ListItemText>
-        </ListItem>
-      </List>
     </div>
   )
 };
 
 export default Description;
-
-// 1. first floor - no stairs
-// 2. in the back of the complex - no noise from beach parties at night
-// 3. heated pool right next to back patio

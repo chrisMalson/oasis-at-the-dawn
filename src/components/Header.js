@@ -1,7 +1,7 @@
 import { Typography, useMediaQuery } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 
-import { BookNowButton } from "./BookNow";
+import { BookNowHeader } from "./BookNow";
 import hero_img from "../img/hero_img.jpg";
 
 const useStyles = makeStyles(theme => ({
@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     margin: "0 auto",
     backgroundImage: `url(${hero_img})`,
     backgroundSize: "cover",
-    backgroundPosition: "center 25%",
+    backgroundPosition: "center 35%",
     backgroundRepeat: "no-repeat",
   },
   textContainer: {
@@ -27,6 +27,7 @@ const useStyles = makeStyles(theme => ({
     background: 'linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.75))'
   },
   text: {
+    // fontFamily: '"Kaushan Script"',
     textAlign: "center",
     color: "#fff",
     padding: "0.5rem",
@@ -48,7 +49,7 @@ const Header = () => {
         <Typography variant="h5" className={text}>Galveston, Texas</Typography>
       </div>
       <div className={buttonContainer}>
-        <BookNowButton />
+        <BookNowHeader />
       </div>
     </div>
   );

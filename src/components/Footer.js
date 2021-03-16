@@ -1,24 +1,38 @@
-import { Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { Typography, useMediaQuery } from "@material-ui/core";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
   container: {
-    backgroundColor: theme.palette.primary.main,
-    marginTop: '1em',
-    paddingTop: '1.5em',
+    backgroundColor: '#79799f',
+    color: '#fff',
+    padding: '1.5em 0 0.5em 0',
     width: "100%",
-    height: "5em"
+    height: "5em",
+  },
+  text: {
+    paddingLeft: '1em',
+    [theme.breakpoints.up('sm')]: {
+      paddingLeft: '5em',
+    },
+    [theme.breakpoints.up('md')]: {
+      paddingLeft: '0'
+    }
   }
 }));
 
 const Footer = () => {
-  const { container } = useStyles();
+  const { container, text } = useStyles();
+  const theme = useTheme();
+
   return (
     <div className={container}>
-      <Typography variant="body2" align="center">
+      <Typography className={text} variant="body2" align={useMediaQuery(theme.breakpoints.up('md')) ? "center" : 'inherit'}>
         Oasis at the Dawn<br />
-        7000 Seawall Blvd, Unit #511<br />
-        Galveston, TX 77551
+        7000 Seawall Blvd
+        {useMediaQuery('(min-width:400px)') ? ', ' : <br />}
+        Unit #511<br />
+        Galveston, TX
+        {useMediaQuery('(min-width:400px)') && ' 77551'}
       </Typography>
     </div>
   );
