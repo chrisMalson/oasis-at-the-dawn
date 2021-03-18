@@ -31,7 +31,12 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "column",
     justifyContent: "flex-end",
     height: '2.5em',
-    background: `${theme.palette.secondary.main}cc`, //converts to 8-digit hex value
+    background: `linear-gradient(
+      to right,
+      ${theme.palette.secondary.main}88,
+      ${theme.palette.secondary.main},
+      ${theme.palette.secondary.main}88
+    )`, //converts to 8-digit hex value
     color: '#fff'
   }
 }));

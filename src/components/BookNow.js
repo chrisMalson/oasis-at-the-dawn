@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
   popup: {
     position: "fixed",
     bottom: "0px",
-    right: "0px"
+    right: "0px",
   }
 }));
 

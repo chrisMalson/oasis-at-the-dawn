@@ -1,5 +1,5 @@
 import { Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 
 
 const useStyles = makeStyles(theme => ({
@@ -17,6 +17,7 @@ const useStyles = makeStyles(theme => ({
 
 const Description = () => {
   const { container, motto } = useStyles();
+  const theme = useTheme();
 
   return (
     <div className={container}>
@@ -30,7 +31,7 @@ const Description = () => {
         granite counters.  Guests will enjoy fun in the sun all day, dining and clubbing in the evening and peaceful
         reflection in the evening.<br /><br />
 
-        Oasis at the Dawn is a large, two bedroom, two bath condominium that will accommodate up to 6 guests.  The large
+        <span>Oasis at the Dawn is a large, two bedroom, two bath condominium that will accommodate up to 6 guests. The large
         floor plan includes a full kitchen and dining area along with a full size washer and dryer for the convenience of
         the guests. The living area features a queen sleeper sofa with a 3" foam mattress,  a 50" Smart TV, and a
         gliding reclining chair for guests who prefer their afternoon naps in a recliner!  The primary bedroom features
@@ -54,8 +55,8 @@ const Description = () => {
         for a two-bedroom) and access codes for parking gates, walk-through gates and for the fitness center.
         Pool/gym bands should be returned to The Dawn prior to departure.<br /><br />
 
-        Pets are not allowed; minimum age of 21 years or older to rent.        
-      </Typography>
+        Pets are not allowed; minimum age of 21 years or older to rent.</span>
+      </Typography>     
     </div>
   )
 };

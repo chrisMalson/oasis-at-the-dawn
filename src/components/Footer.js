@@ -5,9 +5,9 @@ const useStyles = makeStyles(theme => ({
   container: {
     backgroundColor: '#79799f',
     color: '#fff',
-    padding: '1.5em 0 0.5em 0',
+    padding: '1em 0',
     width: "100%",
-    height: "5em",
+    height: "4.5em",
   },
   text: {
     paddingLeft: '1em',
