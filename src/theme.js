@@ -24,9 +24,9 @@ const theme = createMuiTheme({
   },
   typography: {
     fontFamily: [
+      'ABeeZee',
       '-apple-system',
       'BlinkMacSystemFont',
-      'ABeeZee',
       '"Segoe UI"',
       'Roboto',
       '"Helvetica Neue"',
