@@ -25,7 +25,7 @@ const Footer = () => {
   const theme = useTheme();
 
   return (
-    <div className={container}>
+    <div className={container} style={{ height: !useMediaQuery('(min-width: 320px)') && '10em'}}>
       <Typography className={text} variant="body2" align={useMediaQuery(theme.breakpoints.up('md')) ? "center" : 'inherit'}>
         Oasis at the Dawn<br />
         7000 Seawall Blvd

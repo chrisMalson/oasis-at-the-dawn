@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     margin: "0 auto",
     backgroundImage: `url(${hero_img})`,
     backgroundSize: "cover",
-    backgroundPosition: "center 35%",
+    backgroundPosition: "center 25%",
     backgroundRepeat: "no-repeat",
   },
   textContainer: {
@@ -42,10 +42,25 @@ const Header = () => {
   const { hero, text, textContainer, buttonContainer } = useStyles();
   const theme = useTheme();
 
+  let headerVariant;
+
+  
+  if (useMediaQuery(theme.breakpoints.up('sm'))) {
+    headerVariant = "h2";
+  } else {
+    headerVariant = "h3";
+  }
+
+  if (useMediaQuery(theme.breakpoints.up('lg'))) {
+    headerVariant = "h1";
+  }
+
   return (
     <div className={hero}>
       <div className={textContainer}>
-        <Typography variant={useMediaQuery(theme.breakpoints.up('md')) ? "h1" : "h3"} className={text}>Oasis at the Dawn</Typography>
+        <Typography variant={headerVariant} className={text}>Oasis
+        {useMediaQuery(theme.breakpoints.up('sm')) ? ' ' : <br />}
+        at the Dawn</Typography>
         <Typography variant="h5" className={text}>Galveston, Texas</Typography>
       </div>
       <div className={buttonContainer}>
