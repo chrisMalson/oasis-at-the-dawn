@@ -31,10 +31,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: "center",
     color: "#fff",
     padding: "0.5rem",
-    textShadow: `-1px -1px 0 #000,  
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-      1px 1px 0 #000`,
+    textShadow: `2px 2px 0 #0006`,
   }
 }));
 

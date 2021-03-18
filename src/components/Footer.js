@@ -3,7 +3,7 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
   container: {
-    backgroundColor: '#79799f',
+    backgroundColor: '#797979',
     color: '#fff',
     padding: '1em 0',
     width: "100%",

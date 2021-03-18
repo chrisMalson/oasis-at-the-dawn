@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
       flexDirection: 'row-reverse',
       justifyContent: 'space-between'
     },
-    background: '#efeff5'
+    background: '#efefef'
   },
   listContainer: {
     width: '100%',

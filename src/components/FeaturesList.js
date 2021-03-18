@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
       marginLeft: '30%'
     },
     [theme.breakpoints.up('lg')]: {
-      marginLeft: '1.5em'
+      marginLeft: '-3em'
     }
   },
   icon: {

@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
       height: "600px",
     },
     [theme.breakpoints.up('lg')]: {
-      width: '60vw',
+      width: '65vw',
     },
     backgroundSize: 'cover',
     backgroundPosition: 'center'
@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
   gradient: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "flex-end",
+    justifyContent: "center",
     height: '2.5em',
     background: `linear-gradient(
       to right,
@@ -48,7 +48,7 @@ const Photo = ({ item }) => {
   return (
     <Paper className={paper} elevation={2} style={{ backgroundImage: `url(${item.image})` }}>
       <div className={gradient}>
-        <Typography variant={useMediaQuery(theme.breakpoints.up('md')) ? "h6" : "body1"} align="center" gutterBottom>{item.description}</Typography>
+        <Typography variant={useMediaQuery(theme.breakpoints.up('md')) ? "h6" : "body1"} align="center">{item.description}</Typography>
       </div>
     </Paper>
   );

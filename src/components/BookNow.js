@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
       background: '#bff'
     },
     padding: "1.5em 2em",
-    borderRadius: '10px'
+    borderRadius: '10px',
   },
   popup: {
     position: "fixed",
@@ -28,19 +28,20 @@ const useStyles = makeStyles(theme => ({
 
 const bookingURL = "https://www.galvestontxbeachrental.com/dawn_511_oasis-at-the-dawn/";
 
-const BookNowButton = () => {
+const BookNowButton = ({ isPopup }) => {
   const { button } = useStyles();
   const theme = useTheme();
 
   return (
   <Button
     className={button}
+    style={isPopup ? { padding: '0.75em 1em' } : {}}
     href={bookingURL}
     target="_blank"
     variant="contained"
   >
     <Typography align="center" variant={useMediaQuery(theme.breakpoints.up('sm')) ? 'h4' : 'h6'}>
-      Book Now
+      <span style={isPopup ? {fontSize: '1.25rem'} : {}}>Book Now</span>
     </Typography>
   </Button>
   );
@@ -51,7 +52,7 @@ const BookNowHeader = () => {
 
   return (
   <div className={container}>
-    <BookNowButton />
+    <BookNowButton isPopup={false} />
   </div>
   );
 };
@@ -69,10 +70,10 @@ const BookNowPopup = () => {
   return (
     <Slide direction="left" in={yPos >= 700} mountOnEnter unmountOnExit>
       <div className={popup} style={yPos >= document.documentElement.offsetHeight - window.innerHeight && {
-        bottom: '10px',
+        bottom: '25px',
         right: '10px'
       }}>
-        <BookNowButton />
+        <BookNowButton isPopup />
       </div>
     </Slide>
   );
