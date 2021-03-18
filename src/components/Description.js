@@ -17,7 +17,6 @@ const useStyles = makeStyles(theme => ({
 
 const Description = () => {
   const { container, motto } = useStyles();
-  const theme = useTheme();
 
   return (
     <div className={container}>

@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Photo = ({ item }) => {
-  const { paper, gradient, caption } = useStyles();
+  const { paper, gradient } = useStyles();
   const theme = useTheme();
 
   return (

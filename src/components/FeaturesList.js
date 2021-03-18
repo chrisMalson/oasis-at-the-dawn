@@ -1,4 +1,4 @@
-import { Divider, List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
+import { List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import HomeWorkOutlinedIcon from '@material-ui/icons/HomeWorkOutlined';
 import Filter2OutlinedIcon from '@material-ui/icons/Filter2Outlined';
