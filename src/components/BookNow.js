@@ -35,7 +35,7 @@ const BookNowButton = ({ isPopup }) => {
   return (
   <Button
     className={button}
-    style={isPopup ? { padding: '0.75em 1em' } : {}}
+    style={isPopup ? { padding: '0.75em 1em' } : {}} // popup version has less padding than hero embed
     href={bookingURL}
     target="_blank"
     variant="contained"
@@ -67,6 +67,7 @@ const BookNowPopup = () => {
     };
   }, []);
 
+  // below logic may not work on all devices
   return (
     <Slide direction="left" in={yPos >= 700} mountOnEnter unmountOnExit>
       <div className={popup} style={yPos >= document.documentElement.offsetHeight - window.innerHeight && {

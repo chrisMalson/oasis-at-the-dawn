@@ -4,6 +4,9 @@ import Description from './Description';
 import FeaturesList from './FeaturesList';
 import PhotoGallery from './PhotoGallery';
 
+// this component serves as a div that contains the photos and list
+// and was refactored to work well with flexbox
+
 const useStyles = makeStyles(theme => ({
   container: {
     display: 'flex',

@@ -7,7 +7,7 @@ import EmojiTransportationOutlinedIcon from '@material-ui/icons/EmojiTransportat
 import VolumeOffOutlinedIcon from '@material-ui/icons/VolumeOffOutlined';
 import KitchenOutlinedIcon from '@material-ui/icons/KitchenOutlined';
 import PoolOutlinedIcon from '@material-ui/icons/PoolOutlined';
-import BeachAccessIcon from '@material-ui/icons/BeachAccess';
+import BeachAccessOutlinedIcon from '@material-ui/icons/BeachAccessOutlined';
 
 
 const useStyles = makeStyles(theme => ({
@@ -77,7 +77,7 @@ const FeaturesList = () => {
       </ListItem>
       <ListItem>
         <ListItemIcon className={icon}>
-          <BeachAccessIcon />
+          <BeachAccessOutlinedIcon />
         </ListItemIcon>
         <ListItemText>Walking distance from beach, shops and attractions</ListItemText>
       </ListItem>
@@ -86,7 +86,3 @@ const FeaturesList = () => {
 };
 
 export default FeaturesList;
-
-// 1. first floor - no stairs
-// 2. in the back of the complex - no noise from beach parties at night
-// 3. heated pool right next to back patio

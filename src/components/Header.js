@@ -56,7 +56,7 @@ const Header = () => {
     <div className={hero}>
       <div className={textContainer}>
         <Typography variant={headerVariant} className={text}>Oasis
-        {useMediaQuery(theme.breakpoints.up('sm')) ? ' ' : <br />}
+        {useMediaQuery(theme.breakpoints.up('sm')) ? ' ' : <br /> /*text breaks after first word*/}
         at the Dawn</Typography>
         <Typography variant="h5" className={text}>Galveston, Texas</Typography>
       </div>

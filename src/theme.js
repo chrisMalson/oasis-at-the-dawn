@@ -4,7 +4,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 const theme = createMuiTheme({
   overrides: {
     MuiSvgIcon: {
-      fontSizeLarge: {
+      fontSizeLarge: { // for prev/next icons in mobile viewport
         fontSize: '3.25rem',
         color: '#fff',
       }
@@ -12,11 +12,11 @@ const theme = createMuiTheme({
   },
   palette: {
     primary: {
-      main: "#93e9be",
+      main: "#93e9be", // seafoam green
       dark: '#066234'
     },
     secondary: {
-      main: "#fa8072"
+      main: "#fa8072" // salmon pink
     },
     background: {
       paper: "#eee"
@@ -24,7 +24,7 @@ const theme = createMuiTheme({
   },
   typography: {
     button: {
-      textTransform: 'none'
+      textTransform: 'none' // override default to uppercase in material-ui buttons
     },
     fontFamily: [
       'ABeeZee',

@@ -2,17 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { ThemeProvider } from '@material-ui/core/styles';
 
-import Header from './components/Header';
-import Info from './components/Info';
 import { BookNowPopup } from './components/BookNow';
 import Footer from './components/Footer';
+import Header from './components/Header';
+import Info from './components/Info';
 import reportWebVitals from './reportWebVitals';
 import theme from "./theme";
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      {/* <TopBar /> */}
       <Header />
       <Info />
       <BookNowPopup />

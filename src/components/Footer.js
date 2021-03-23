@@ -24,6 +24,21 @@ const Footer = () => {
   const { container, text } = useStyles();
   const theme = useTheme();
 
+  /*
+  Whole lot of messy logic below for responsiveness. Expected output is either:
+
+  Oasis at the Dawn
+  7000 Seawall Blvd, Unit #511
+  Galveston, TX 77551
+
+  or:
+
+  Oasis at the Dawn
+  7000 Seawall Blvd
+  Unit #511
+  Galveston, TX
+  */
+
   return (
     <div className={container} style={{ height: !useMediaQuery('(min-width: 360px)') && '10em'}}>
       <Typography className={text} variant="body2" align={useMediaQuery(theme.breakpoints.up('md')) ? "center" : 'inherit'}>

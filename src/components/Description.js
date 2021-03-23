@@ -1,7 +1,6 @@
 import { Paper, Typography, useMediaQuery } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-
 const useStyles = makeStyles(theme => ({
   container: {
     color: '#000d',
@@ -41,7 +40,7 @@ const Description = () => {
           located only steps away from the swimming pool and across the Seawall from the recently restored "Babe's Beach".
           This condo was recently remodeled and the large open floor plan features tile floors and an updated kitchen with
           granite counters.  Guests will enjoy fun in the sun all day, dining and clubbing in the evening and peaceful
-          reflection in the evening.
+          reflection at night.
         </Typography>
       </Paper>     
     </div>
