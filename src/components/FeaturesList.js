@@ -1,10 +1,8 @@
 import { List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import HomeWorkOutlinedIcon from '@material-ui/icons/HomeWorkOutlined';
-import Filter2OutlinedIcon from '@material-ui/icons/Filter2Outlined';
 import HotelOutlinedIcon from '@material-ui/icons/HotelOutlined';
-import EmojiTransportationOutlinedIcon from '@material-ui/icons/EmojiTransportationOutlined';
-import VolumeOffOutlinedIcon from '@material-ui/icons/VolumeOffOutlined';
+import DriveEtaOutlinedIcon from '@material-ui/icons/DriveEtaOutlined';
 import KitchenOutlinedIcon from '@material-ui/icons/KitchenOutlined';
 import PoolOutlinedIcon from '@material-ui/icons/PoolOutlined';
 import BeachAccessOutlinedIcon from '@material-ui/icons/BeachAccessOutlined';
@@ -13,14 +11,15 @@ import BeachAccessOutlinedIcon from '@material-ui/icons/BeachAccessOutlined';
 const useStyles = makeStyles(theme => ({
   list: {
     margin: '1.5em',
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: "15%",
-    },
+    // [theme.breakpoints.up('sm')]: {
+    //   marginLeft: "15%",
+    // },
     [theme.breakpoints.up('md')]: {
-      marginLeft: '30%'
+      marginLeft: '5%'
     },
     [theme.breakpoints.up('lg')]: {
-      marginLeft: '-3em'
+      marginLeft: '-3em',
+      marginBottom: '0'
     }
   },
   icon: {
@@ -37,49 +36,37 @@ const FeaturesList = () => {
         <ListItemIcon className={icon}>
           <HomeWorkOutlinedIcon />
         </ListItemIcon>
-        <ListItemText>1,116 sqft condo</ListItemText>
-      </ListItem>
-      <ListItem>
-        <ListItemIcon className={icon}>
-          <Filter2OutlinedIcon />
-        </ListItemIcon>
-        <ListItemText>2 bedrooms, 2 bathrooms</ListItemText>
+        <ListItemText>Large first floor condo with easy access from parking lot and away from the road noise</ListItemText>
       </ListItem>
       <ListItem>
         <ListItemIcon className={icon}>
           <HotelOutlinedIcon />
         </ListItemIcon>
-        <ListItemText>Sleeps 6 people comfortably with 2 king size beds / sleeper sofa</ListItemText>
-      </ListItem>
-      <ListItem>
-        <ListItemIcon className={icon}>
-          <EmojiTransportationOutlinedIcon />
-        </ListItemIcon>
-        <ListItemText>First floor condo; easy access from parking lot</ListItemText>
-      </ListItem>
-      <ListItem>
-        <ListItemIcon className={icon}>
-          <VolumeOffOutlinedIcon />
-        </ListItemIcon>
-        <ListItemText>Located in back of complex, away from road and noise</ListItemText>
+        <ListItemText>With 2 bedrooms and king beds, a queen size sleeper and two bathrooms it houses 6 people comfortably</ListItemText>
       </ListItem>
       <ListItem>
         <ListItemIcon className={icon}>
           <KitchenOutlinedIcon />
         </ListItemIcon>
-        <ListItemText>Full size kitchen and laundry room</ListItemText>
+        <ListItemText>A full size kitchen, dining area and laundry room provide all the comforts of home for long term stays</ListItemText>
       </ListItem>
       <ListItem>
         <ListItemIcon className={icon}>
           <PoolOutlinedIcon />
         </ListItemIcon>
-        <ListItemText>Community has two pools (one heated!) and hot tub nearby</ListItemText>
+        <ListItemText>The Dawn has two large swimming pools (The closest one heated), a hot tub and an exercise room</ListItemText>
       </ListItem>
       <ListItem>
         <ListItemIcon className={icon}>
           <BeachAccessOutlinedIcon />
         </ListItemIcon>
         <ListItemText>Walking distance from beach, shops and attractions</ListItemText>
+      </ListItem>
+      <ListItem>
+        <ListItemIcon className={icon}>
+          <DriveEtaOutlinedIcon />
+        </ListItemIcon>
+        <ListItemText>Right on Seawall Blvd and across the street from Babe's Beach with the only free parking on the island</ListItemText>
       </ListItem>
     </List>
   );

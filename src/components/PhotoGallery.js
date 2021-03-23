@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
       height: "600px",
     },
     [theme.breakpoints.up('lg')]: {
-      width: '65vw',
+      width: '60vw',
     },
     backgroundSize: 'cover',
     backgroundPosition: 'center'
