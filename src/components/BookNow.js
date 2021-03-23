@@ -40,8 +40,8 @@ const BookNowButton = ({ isPopup }) => {
     target="_blank"
     variant="contained"
   >
-    <Typography align="center" variant={useMediaQuery(theme.breakpoints.up('sm')) && !isPopup ? 'h4' : 'h6'}>
-      Book Now
+    <Typography align="center" variant={useMediaQuery(theme.breakpoints.up('sm')) && !isPopup ? 'h5' : 'h6'}>
+      Check availability
     </Typography>
   </Button>
   );

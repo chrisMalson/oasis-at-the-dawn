@@ -25,14 +25,14 @@ const Footer = () => {
   const theme = useTheme();
 
   return (
-    <div className={container} style={{ height: !useMediaQuery('(min-width: 320px)') && '10em'}}>
+    <div className={container} style={{ height: !useMediaQuery('(min-width: 360px)') && '10em'}}>
       <Typography className={text} variant="body2" align={useMediaQuery(theme.breakpoints.up('md')) ? "center" : 'inherit'}>
         Oasis at the Dawn<br />
         7000 Seawall Blvd
-        {useMediaQuery('(min-width:400px)') ? ', ' : <br />}
+        {useMediaQuery('(min-width:450px)') ? ', ' : <br />}
         Unit #511<br />
         Galveston, TX
-        {useMediaQuery('(min-width:400px)') && ' 77551'}
+        {useMediaQuery('(min-width:450px)') && ' 77551'}
       </Typography>
     </div>
   );

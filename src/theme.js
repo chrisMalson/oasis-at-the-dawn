@@ -23,6 +23,9 @@ const theme = createMuiTheme({
     }
   },
   typography: {
+    button: {
+      textTransform: 'none'
+    },
     fontFamily: [
       'ABeeZee',
       '-apple-system',

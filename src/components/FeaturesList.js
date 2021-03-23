@@ -5,8 +5,9 @@ import Filter2OutlinedIcon from '@material-ui/icons/Filter2Outlined';
 import HotelOutlinedIcon from '@material-ui/icons/HotelOutlined';
 import EmojiTransportationOutlinedIcon from '@material-ui/icons/EmojiTransportationOutlined';
 import VolumeOffOutlinedIcon from '@material-ui/icons/VolumeOffOutlined';
-import FlareOutlinedIcon from '@material-ui/icons/FlareOutlined';
+import KitchenOutlinedIcon from '@material-ui/icons/KitchenOutlined';
 import PoolOutlinedIcon from '@material-ui/icons/PoolOutlined';
+import BeachAccessIcon from '@material-ui/icons/BeachAccess';
 
 
 const useStyles = makeStyles(theme => ({
@@ -48,7 +49,7 @@ const FeaturesList = () => {
         <ListItemIcon className={icon}>
           <HotelOutlinedIcon />
         </ListItemIcon>
-        <ListItemText>Sleeps up to 6 people with sleeper sofa</ListItemText>
+        <ListItemText>Sleeps 6 people comfortably with 2 king size beds / sleeper sofa</ListItemText>
       </ListItem>
       <ListItem>
         <ListItemIcon className={icon}>
@@ -64,15 +65,21 @@ const FeaturesList = () => {
       </ListItem>
       <ListItem>
         <ListItemIcon className={icon}>
-          <FlareOutlinedIcon />
+          <KitchenOutlinedIcon />
         </ListItemIcon>
-        <ListItemText>Recently remodeled; tile floors / granite countertops</ListItemText>
+        <ListItemText>Full size kitchen and laundry room</ListItemText>
       </ListItem>
       <ListItem>
         <ListItemIcon className={icon}>
           <PoolOutlinedIcon />
         </ListItemIcon>
-        <ListItemText>Community heated pool and hot tub nearby</ListItemText>
+        <ListItemText>Community has two pools (one heated!) and hot tub nearby</ListItemText>
+      </ListItem>
+      <ListItem>
+        <ListItemIcon className={icon}>
+          <BeachAccessIcon />
+        </ListItemIcon>
+        <ListItemText>Walking distance from beach, shops and attractions</ListItemText>
       </ListItem>
     </List>
   );

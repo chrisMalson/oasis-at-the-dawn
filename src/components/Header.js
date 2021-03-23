@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
-    height: "60vh",
+    height: "85vh",
     [theme.breakpoints.down('sm')]: {
       height: "75vh",
     },
@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
   },
   textContainer: {
     backgroundImage: 'linear-gradient(rgba(0,0,255,0.5), rgba(0,0,0,0))',
-    padding: "1.5em 0"
+    padding: "2.5em 0"
   },
   buttonContainer: {
     background: 'linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.75))'
