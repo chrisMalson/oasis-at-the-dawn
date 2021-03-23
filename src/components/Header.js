@@ -9,22 +9,25 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
-    height: "85vh",
-    [theme.breakpoints.down('sm')]: {
-      height: "75vh",
-    },
     margin: "0 auto",
     backgroundImage: `url(${hero_img})`,
     backgroundSize: "cover",
-    backgroundPosition: "center 25%",
+    backgroundPosition: "center",
+    height: "85vh",
     backgroundRepeat: "no-repeat",
   },
   textContainer: {
     backgroundImage: 'linear-gradient(rgba(0,0,255,0.5), rgba(0,0,0,0))',
-    padding: "2.5em 0"
+    paddingTop: '8%',
+    [theme.breakpoints.up('lg')]: {
+      paddingTop: '4%'
+    }
   },
   buttonContainer: {
-    background: 'linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.75))'
+    background: 'linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 75%, rgba(0,0,0,0.75) 100%)',
+    [theme.breakpoints.up('sm')]: {
+      paddingBottom: '2.5em'
+    }
   },
   text: {
     // fontFamily: '"Kaushan Script"',
@@ -48,7 +51,7 @@ const Header = () => {
     headerVariant = "h3";
   }
 
-  if (useMediaQuery(theme.breakpoints.up('lg'))) {
+  if (useMediaQuery(theme.breakpoints.up('md'))) {
     headerVariant = "h1";
   }
 
